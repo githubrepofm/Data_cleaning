@@ -8,30 +8,30 @@ Instructions:
 
 Downloaded the data set
 Unzipped the data set into my chosen working directory
-# Loading Acitivty Labels and naming the columns
-# Loading 561 features and naming the columns
-# Determined Only features with mean
+Loading Acitivty Labels and naming the columns
+Loading 561 features and naming the columns
+Determined Only features with mean
 
-## Training data section
-#Loading Subject data and naming the columns
-#Loading activity records (y_train)
-#Loading Feature records and Naming it
-#Feature records with only mean columns
-#Merging Activity Labels with the y_train to create activity records
-#Create final table for Train data
+#### Training data section
+Loading Subject data and naming the columns
+Loading activity records (y_train)
+Loading Feature records and Naming it
+Feature records with only mean columns
+Merging Activity Labels with the y_train to create activity records
+Create final table for Train data
 
-## Test data section
-#Loading Subject data and naming the colums
-#Loading activity records (y_test)
-#Loading Feature records and Naming it
-#Feature records with only mean columns
-#Merging Activity Labels with the y_test to create activity records
-#Create final table for Test data
+#### Test data section
+Loading Subject data and naming the colums
+Loading activity records (y_test)
+Loading Feature records and Naming it
+Feature records with only mean columns
+Merging Activity Labels with the y_test to create activity records
+Create final table for Test data
 
-###Combine test and train data to create the final output
+####Combine test and train data to create the final output
 Produced "merged_tidy_data.txt" with the combined data frame as the first expected output
 
-###Summarize the final data ouput by subject and activity
+####Summarize the final data ouput by subject and activity
 
 Created another data set using the data.table library to easily group the tidy data by subject and activity
 Then applied the mean and standard deviation calculations across the groups
