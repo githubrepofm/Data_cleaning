@@ -1,4 +1,3 @@
-
 ##Loading the individual tables into R
 
 # Loading Acitivty Labels and naming the columns
@@ -16,7 +15,7 @@ mean_features<-grep("-mean\\(\\)|-std\\(\\)", features[,2])
 ### Training data section
 
 
-#Loading Subject data and naming the colums
+#Loading Subject data and naming the columns
 subject_train<-read.table("getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt")
 names(subject_train)<-"Subject ID"
 
@@ -44,7 +43,7 @@ train_data<-cbind(subject_train,activity_record$activity_label,feature_record_tr
 subject_test<-read.table("getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt")
 names(subject_test)<-"Subject ID"
 
-#Loading activity records (y_train)
+#Loading activity records (y_test)
 y_test<-read.table("getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/y_test.txt")
 names(y_test)<-"activity_id"
 
@@ -66,6 +65,8 @@ test_data<-cbind(subject_test,activity_record$activity_label,feature_record_test
 final_data<-rbind(test_data,train_data)
 
 write.table(final_data, "merged_tidy_data.txt")
+
+#Summarize the final data ouput by subject and activity
 
 library(data.table)
 dataDT <- data.table(final_data)
